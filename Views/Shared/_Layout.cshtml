@@ -3,32 +3,46 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Huerto_Del_valle</title>
+    <title>@ViewData["Title"] - prueba_de_mrda</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+ <link rel="stylesheet" href="~/lib/bootstrap/dist/css/animate.css">
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/font-awesome.min.css">
+  <link href="~/lib/bootstrap/dist/css/animate.min.css" rel="stylesheet">
+  <link href="~/lib/bootstrap/dist/css/style.css" rel="stylesheet" />
+  
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Huerto_Del_valle</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+     <header id="header">
+    <nav class="navbar navbar-default navbar-static-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+          <div class="navbar-brand">
+            <a href="index.html"><h1>Huerto del Valle</h1></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <div class="menu">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Inicio</a></li>
+              <li role="presentation"><a href="about.html">Iniciar Sesión</a></li>
+              <li role="presentation"><a href="services.html">Registrarse</a></li>
+              <li role="presentation"><a href="gallery.html">Gallery</a></li>
+              <li role="presentation"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/.container-->
+    </nav>
+    <!--/nav-->
+  </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
