@@ -15649,6 +15649,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\VS\\Huertos del valle\\ElHuertoDelValle\\Proyecto_Prog1\\Views\\Home\\Contacto.cshtml",
+      "TargetPath": "Views\\Home\\Contacto.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\VS\\Huertos del valle\\ElHuertoDelValle\\Proyecto_Prog1\\Views\\Home\\Nosotros.cshtml",
+      "TargetPath": "Views\\Home\\Nosotros.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\VS\\Huertos del valle\\ElHuertoDelValle\\Proyecto_Prog1\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
