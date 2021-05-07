@@ -31,7 +31,11 @@ namespace Huerto_Del_valle.Controllers
         {
             return View();
         }
+<<<<<<< HEAD
         public IActionResult Contacto()
+=======
+         public IActionResult Contacto()
+>>>>>>> e5ae0849dc181cfa5ea87fdb6502d3c69d92394f
         {
             return View();
         }
