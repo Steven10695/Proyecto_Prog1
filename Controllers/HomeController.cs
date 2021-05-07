@@ -22,6 +22,10 @@ namespace Huerto_Del_valle.Controllers
         {
             return View();
         }
+        public IActionResult Nosotros()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
