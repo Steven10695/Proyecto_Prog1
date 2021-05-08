@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Proyecto_Prog1\\Huerto_Del_valle.csproj": {}
+    "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj": {}
   },
   "projects": {
-    "D:\\Proyecto_Prog1\\Huerto_Del_valle.csproj": {
+    "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
+        "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
         "projectName": "Huerto_Del_valle",
-        "projectPath": "D:\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyecto_Prog1\\obj\\",
+        "projectPath": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
