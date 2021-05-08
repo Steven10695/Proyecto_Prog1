@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj": {}
+    "C:\\Users\\MICHELLE\\Documents\\2021-I\\Programacion I\\Visual Code\\Proyecto_Prog1\\Huerto_Del_valle.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj": {
+    "C:\\Users\\MICHELLE\\Documents\\2021-I\\Programacion I\\Visual Code\\Proyecto_Prog1\\Huerto_Del_valle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
+        "projectUniqueName": "C:\\Users\\MICHELLE\\Documents\\2021-I\\Programacion I\\Visual Code\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
         "projectName": "Huerto_Del_valle",
-        "projectPath": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\obj\\",
+        "projectPath": "C:\\Users\\MICHELLE\\Documents\\2021-I\\Programacion I\\Visual Code\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
+        "packagesPath": "C:\\Users\\MICHELLE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MICHELLE\\Documents\\2021-I\\Programacion I\\Visual Code\\Proyecto_Prog1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MICHELLE\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
