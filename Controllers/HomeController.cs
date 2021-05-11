@@ -23,7 +23,23 @@ namespace Huerto_Del_valle.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult IniciarSesion()
+        {
+            return View();
+        }
+        public IActionResult Registrarse()
+        {
+            return View();
+        }
+        public IActionResult Nosotros()
+        {
+            return View();
+        }
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+        public IActionResult EditarInformacion()
         {
             return View();
         }
