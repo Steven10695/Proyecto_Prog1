@@ -15644,6 +15644,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Views\\Home\\Contacto2.cshtml",
+      "TargetPath": "Views\\Home\\Contacto2.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
