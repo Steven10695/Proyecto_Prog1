@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
+      "projectUniqueName": "D:\\VS\\Huertos del valle\\ElHuertoDelValle\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
       "projectName": "Huerto_Del_valle",
-      "projectPath": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
-      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\Documents\\Webs\\Proyecto_Prog1\\obj\\",
+      "projectPath": "D:\\VS\\Huertos del valle\\ElHuertoDelValle\\Proyecto_Prog1\\Huerto_Del_valle.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\VS\\Huertos del valle\\ElHuertoDelValle\\Proyecto_Prog1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

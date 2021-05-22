@@ -36,10 +36,7 @@ namespace Huerto_Del_valle.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        
          public IActionResult Contacto()
         {
             return View();

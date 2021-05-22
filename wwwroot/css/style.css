@@ -16,11 +16,15 @@ body {
 	background-color:#fff;
 	overflow-x:hidden;
 }
-
-hi,h2,h3,h4,h5,h6 {
+.carousel-inner h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 100px;
+}
+h0,h1,h2,h3,h4,h5,h6 {
 	color:#272727;
 	line-height:1.1em;
 }
+
 
 p {
 	color:#272727;
@@ -143,7 +147,7 @@ a:hover {
 ============================ */
 .slider {
 	position: relative;	
-	margin-top:-20px;
+	margin-top:0px;
 }
 
 .slider img {
@@ -299,6 +303,7 @@ a:hover {
 	margin-top:20px;
 	margin-bottom:80px;
 	color:#aaa;
+  font-size: 20px;
 } 
 
 .btn-gamp a {
@@ -708,6 +713,7 @@ ul.social_icons li  a i{
 
 .services {
 	padding:80px 0 80px 0;
+  justify-content: center;
 }
 
 .services .text-center h2 {
@@ -977,7 +983,7 @@ footer {
 }
 
 footer p {
-	color:#fff;
+	color:#D19558;
 }
 
 footer h4 {
