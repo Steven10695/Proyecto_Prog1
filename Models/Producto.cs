@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Proyecto_Prog1.Models
 {
     public class Producto
@@ -7,5 +9,6 @@ namespace Proyecto_Prog1.Models
         public string Cantidad_Producto{get;set;}
         public string Categoria_Producto{get;set;}
         public string Precio_Producto{get;set;}
+          public ICollection<TipoProducto> TipoProductos {get; set;}
     }
 }
