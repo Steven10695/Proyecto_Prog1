@@ -174,3 +174,4 @@ D:\VS\Huertos del valle\ElHuertoDelValle\Proyecto_Prog1\obj\Debug\net5.0\ref\Hue
 D:\VS\Huertos del valle\ElHuertoDelValle\Proyecto_Prog1\obj\Debug\net5.0\Huerto_Del_valle.pdb
 D:\VS\Huertos del valle\ElHuertoDelValle\Proyecto_Prog1\obj\Debug\net5.0\Huerto_Del_valle.genruntimeconfig.cache
 D:\VS\Huertos del valle\ElHuertoDelValle\Proyecto_Prog1\obj\Debug\net5.0\Huerto_Del_valle.csproj.CopyComplete
+C:\Users\USUARIO\Documents\Webs\Proyecto_Prog1\obj\Debug\net5.0\Razor\Views\Home\Contacto2.cshtml.g.cs

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Huerto_Del_valle.Models;
+using Proyecto_Prog1.Models;
+using System.Net.Mail;
+using System.Net;
 
 namespace Huerto_Del_valle.Controllers
 {
@@ -36,11 +39,62 @@ namespace Huerto_Del_valle.Controllers
             return View();
         }
 
-        
+        [HttpGet]
          public IActionResult Contacto()
         {
             return View();
         }
+
+        [HttpPost]
+         public IActionResult Contacto(SendMailDto sendMailDto)
+        {
+            if (!ModelState.IsValid) 
+
+            try
+            {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("steven_palma@atmosferasweb.com");
+
+                mail.To.Add("steven_palma@atmosferasweb.com");
+
+                mail.Subject = sendMailDto.Subject;
+
+                mail.IsBodyHtml = true;
+
+                string content = "Name: " + sendMailDto.Nombre;
+                content += "<br/> Correo: " + sendMailDto.Mail;
+                content += "<br/> Mensaje: " + sendMailDto.Mensaje;
+
+                mail.Body = content;
+
+                //SMTP 
+
+                SmtpClient smtpClient = new  SmtpClient("mail.atmosferasweb.com");
+
+                // Credenciales
+
+                NetworkCredential networkCredential = new NetworkCredential("steven_palma@atmosferasweb.com","StevenPalma1!");
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.Credentials = networkCredential;
+                smtpClient.Port = 25;
+                smtpClient.EnableSsl = false;
+                smtpClient.Send(mail);
+
+                ViewBag.Message = "Mail Enviado";
+
+                ModelState.Clear();
+
+
+            }
+            catch(Exception e)
+            {
+                ViewBag.Message = e.Message.ToString();
+            }
+
+            return View();
+
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

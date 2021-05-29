@@ -5,13 +5,13 @@ namespace Proyecto_Prog1.Models
     public class SendMailDto
     {
         [Required]
-        public string nombre {get; set;}
+        public string Nombre {get; set;}
         [Required]
-        public string mail {get; set;}
+        public string Mail {get; set;}
         [Required]
-        public string subject {get; set;}
+        public string Subject {get; set;}
         [Required]
-        public string mensaje {get; set;}
+        public string Mensaje {get; set;}
 
 
 
