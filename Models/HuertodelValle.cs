@@ -1,4 +1,4 @@
-namespace app.Models
+namespace Huerto_Del_valle.Models
 {
     public class HuertodelValle
     {

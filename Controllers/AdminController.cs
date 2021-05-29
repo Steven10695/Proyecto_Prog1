@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Proyecto_Prog1.Controllers
+namespace Huerto_Del_valle.Controllers
 {
     public class AdminController : Controller
     {

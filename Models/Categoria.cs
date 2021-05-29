@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-namespace app.Models
+namespace Huerto_Del_valle.Models
 {
     public class Categoria
     {

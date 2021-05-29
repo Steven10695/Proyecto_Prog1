@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:6217",
-      "sslPort": 44356
+      "applicationUrl": "http://localhost:1802",
+      "sslPort": 44316
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Huerto_Del_valle": {
+    "Proyecto_Prog1": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

@@ -1,7 +1,7 @@
-using app.Models;
+using Huerto_Del_valle.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace app.Controllers
+namespace Huerto_Del_valle.Controllers
 {
     public class ApplicationDbContext : DbContext
     {
