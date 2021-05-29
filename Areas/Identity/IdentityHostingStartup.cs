@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using plantitas.Data;
 
 [assembly: HostingStartup(typeof(plantitas.Areas.Identity.IdentityHostingStartup))]
 namespace plantitas.Areas.Identity
