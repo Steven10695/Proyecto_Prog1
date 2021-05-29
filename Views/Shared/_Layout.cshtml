@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - prueba_de_mrda</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/animate.css">
-  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/font-awesome.min.css">
-  <link href="~/lib/bootstrap/dist/css/animate.min.css" rel="stylesheet">
-  <link href="~/lib/bootstrap/dist/css/style.css" rel="stylesheet" />
+    <title>@ViewData["Title"] - HUERTO_DEL_VALLE</title>
+      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="~/css/site.css" />
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/animate.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/font-awesome.min.css">
+    <link href="~/lib/bootstrap/dist/css/animate.min.css" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/style.css" rel="stylesheet" />
   
 </head>
 <body>
@@ -24,17 +24,20 @@
                         <span class="icon-bar"></span>
                     </button>
           <div class="navbar-brand">
-            <a href="index.html"><h1>Huerto del Valle</h1></a>
+            <a href="Index"><h1>Huerto del Valle</h1></a>
           </div>
         </div>
         <div class="navbar-collapse collapse">
           <div class="menu">
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Inicio</a></li>
-              <li role="presentation"><a href="about.html">Iniciar Sesión</a></li>
-              <li role="presentation"><a href="services.html">Registrarse</a></li>
-              <li role="presentation"><a href="gallery.html">Gallery</a></li>
-              <li role="presentation"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a></li>
+              <li role="presentation"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+               <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Producto">Añadir Producto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Busco">Lista de productos</a>
+                        </li>
+              
             </ul>
           </div>
         </div>
@@ -46,12 +49,12 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
-        </main>
+            </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - Huerto_Del_valle - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; Huerto del Valle <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
