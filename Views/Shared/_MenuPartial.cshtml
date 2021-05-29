@@ -6,13 +6,16 @@
 @if (SignInManager.IsSignedIn(User))
 {
 
-    @if(UserManager.GetUserName(User).Equals("elingeniero@gmail.com")){
+    @if(UserManager.GetUserName(User).Equals("admin@hotmail.com")){
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Index">Producto</a>
         </li> 
     }else{
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Proforma" asp-action="Index">Carrito</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="EditarProducto" asp-action="Index">Editar Producto</a>
+        </li> 
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Busco" asp-action="Index">Busco</a>
         </li> 
     }
 }
