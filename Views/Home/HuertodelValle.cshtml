@@ -1,4 +1,4 @@
-@model List<Producto>
+@model IEnumerable<app.Models.Producto>
 @{
     ViewData["Title"] = "Solicitudes de productos añadidas";
 }
@@ -7,12 +7,6 @@
     <h1 class="display-4">Solicitudes registradas en los ultimos 7 dias</h1>
 </div>
 
-<div style="margin-top: 30px; text-align: center;" >
-    @if (Model.Count == 0)
-    {
-        <div class="p-3 mb-2 bg-danger text-white">Aún no se han obtenido datos de registro de productos, le invitamos a registrar sus productos:)</div>
-    }
-</div>
 
 <div style="margin-top: 30px;">
     <div class="row">

@@ -34,7 +34,7 @@ namespace app.Controllers
             return View();
         }
 
-        public IActionResult Busco()
+        public IActionResult HuertodelValle()
         { 
         var productos = _context.Productos.ToList();
             return View(productos);
@@ -49,7 +49,7 @@ namespace app.Controllers
                 _context.Add(p);
                 _context.SaveChanges();
                  Console.WriteLine("Producto añadido");
-                return RedirectToAction("Busco");
+                return RedirectToAction("HuertodelValle");
             }
             return View(p);
         }
@@ -59,7 +59,7 @@ namespace app.Controllers
             var productos = _context.Productos.FirstOrDefault(p => p.id == id);
             _context.Remove(productos);
             _context.SaveChanges();
-            return RedirectToAction("Busco");
+            return RedirectToAction("HuertodelValle");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -84,7 +84,7 @@ namespace app.Controllers
                 producto.usuario=p.usuario;
                 _context.SaveChanges();
                  Console.WriteLine("Producto añadido");
-                return RedirectToAction("Busco");
+                return RedirectToAction("HuertodelValle");
             }
             return View(p);
         }

@@ -1,6 +1,6 @@
 namespace app.Models
 {
-    public class Busco
+    public class HuertodelValle
     {
         public int Id{get;set;}
     }
