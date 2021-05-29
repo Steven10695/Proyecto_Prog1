@@ -1,8 +1,35 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Solicitudes de productos añadidas";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<body style="background-color: #fff;">  
+<div class="text-center" style="margin-top: 50px;">
+    <h1 class="display-1">El Huerto del Valle</h1>
 </div>
+<div style="margin-top: 30px; text-align: center;">
+        <div class="p-3 mb-2 bg-warning text-white">  
+            <h2>Bienvenidos!</h2>
+        </div>
+</div>
+
+    <img src="https://scontent.flim18-2.fna.fbcdn.net/v/t1.6435-9/88064315_1555739631242230_8960099006990516224_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=e3f864&_nc_eui2=AeEh3KubddzzSZzTXZHtNT75L3AdrpgPOHYvcB2umA84djMnMBh9eKoGoNcJaNFN1ezBDVH4fIGKb0SinT33w61z&_nc_ohc=UQnBllLA2t8AX8cKAQ5&_nc_oc=AQnCsNeoB5qVDx7TQS0RQfdWP0hWfClVKOxIc8irJDSoZISIJROhHv-xZYyfK9nbxUw&_nc_ht=scontent.flim18-2.fna&oh=f01a94023e04e5b6a0988f23e706cee4&oe=60D55B08" class="d-block w-100" alt="huerto" width="1130px" height="350px">
+    
+<div style="margin-top: 30px; text-align: center;">
+        <div class="p-3 mb-2 bg-warning text-white">  
+            <h2>¿Qué desea hacer?</h2>
+        </div>
+</div>
+<div style="text-align: center; margin-top: 15px;">
+            <a asp-controller="Home" asp-action="Busco"> 
+            <button type="button" class="btn btn-secondary">Ver mis solicitudes registradas</button>
+            </a>
+        </div>
+        
+
+        <div style="text-align: center; margin-top: 15px;">
+            <a asp-controller="Home" asp-action="Producto">
+                <button type="button" class="btn btn-secondary">Agregar nuevos productos</button></a>
+        </div>
+        
+    </div>
+</body>
