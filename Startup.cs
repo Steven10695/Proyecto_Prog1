@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Huerto_Del_valle.Models;
 using Proyecto_Prog1.Controllers;
 
 namespace Huerto_Del_valle
