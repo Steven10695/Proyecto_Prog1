@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Huerto_Del_valle.Models
 {
+      [Table("t_product")]
     public class Producto
     {
             public int id { get; set; }
