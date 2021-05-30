@@ -43,13 +43,13 @@ namespace Huerto_Del_valle.Controllers
         }
          [HttpPost]
           [ValidateAntiForgeryToken]
-        public IActionResult Producto([Bind("id,nombre,url_producto,descripcion,precio,lugarcompraproducto,usuario")]Producto p)
+        public IActionResult Producto([Bind("id,nombre,url_producto,descripcion,precio,lugarcompraproducto,usuario,tipo_producto")]Producto p)
         {
             if(ModelState.IsValid){
                 _context.Add(p);
                 _context.SaveChanges();
                  Console.WriteLine("Producto añadido");
-                return RedirectToAction("HuertoDelValle");
+                return RedirectToAction("HuertodelValle");
             }
             return View(p);
         }
@@ -59,7 +59,7 @@ namespace Huerto_Del_valle.Controllers
             var productos = _context.Productos.FirstOrDefault(p => p.id == id);
             _context.Remove(productos);
             _context.SaveChanges();
-            return RedirectToAction("HuertoDelValle");
+            return RedirectToAction("HuertodelValle");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -81,9 +81,10 @@ namespace Huerto_Del_valle.Controllers
                 producto.precio=p.precio;
                 producto.lugarcompraproducto=p.lugarcompraproducto;
                 producto.usuario=p.usuario;
+                producto.tipo_producto=p.tipo_producto;
                 _context.SaveChanges();
                  Console.WriteLine("Producto añadido");
-                return RedirectToAction("Busco");
+                return RedirectToAction("HuertodelValle");
             }
             return View(p);
         }

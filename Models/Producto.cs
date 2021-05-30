@@ -38,6 +38,9 @@ namespace Huerto_Del_valle.Models
 
         [Required]
         public DateTime addDate { get; set; }
-         public ICollection<Categoria> Categorias {get; set;}
+
+         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un lugar de compra del producto!")]
+        [Display(Name="Ingrese el tipo de producto!")]
+         public string tipo_producto {get; set;}
     }
 }

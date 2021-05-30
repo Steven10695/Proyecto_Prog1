@@ -10,7 +10,6 @@ namespace Huerto_Del_valle.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Producto> Productos { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
