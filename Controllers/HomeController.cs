@@ -27,6 +27,18 @@ namespace Huerto_Del_valle.Controllers
         {
             return View();
         }
+        public IActionResult EditarProducto()
+        {
+            return View();
+        }
+        public IActionResult HuertodelValle()
+        {
+            return View();
+        }
+        public IActionResult Producto()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
