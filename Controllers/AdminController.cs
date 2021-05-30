@@ -37,11 +37,13 @@ namespace Huerto_Del_valle.Controllers
         var productos = _context.Productos.ToList();
             return View(productos);
         }
+
         public IActionResult Producto(){
             return View();
         }
          [HttpPost]
-        public IActionResult Producto(Producto p)
+          [ValidateAntiForgeryToken]
+        public IActionResult Producto([Bind("id,nombre,url_producto,descripcion,precio,lugarcompraproducto,usuario")]Producto p)
         {
             if(ModelState.IsValid){
                 _context.Add(p);
@@ -77,7 +79,6 @@ namespace Huerto_Del_valle.Controllers
                 producto.nombre= p.nombre;
                 producto.descripcion=p.descripcion;
                 producto.precio=p.precio;
-                producto.celular=p.celular;
                 producto.lugarcompraproducto=p.lugarcompraproducto;
                 producto.usuario=p.usuario;
                 _context.SaveChanges();

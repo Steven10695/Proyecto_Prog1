@@ -5,10 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Huerto_Del_valle.Models
 {
-      [Table("t_product")]
+      [Table("t_producto")]
     public class Producto
     {
-            public int id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("id")]
+        public int id { get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un producto!")]
         [Display(Name="Nombre del producto")]
@@ -25,10 +27,6 @@ namespace Huerto_Del_valle.Models
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un precio!")]
         [Display(Name="Precio a pagar")]
         public double precio { get; set; }
-        
-        [Required(ErrorMessage="¡Espacio en blanco, Ingrese un número de contacto!")]
-        [Display(Name="Celular para contacto")]       
-        public int celular { get; set; }
  
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un lugar de compra del producto!")]
         [Display(Name="Lugar de compra del producto")]
