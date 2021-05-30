@@ -1,3 +1,4 @@
+
 @model IEnumerable<Huerto_Del_valle.Models.Producto>
 @{
     ViewData["Title"] = "Solicitudes de productos añadidas";
@@ -8,7 +9,7 @@
 </div>
 
 
-<div style="margin-top: 30px;">
+<div style="margin-top: 30px;" >
     <div class="row">
         @foreach (var producto in Model)
         { 
@@ -22,7 +23,7 @@
                         <ul class="list-group list-group-flush" >
                             <li class="list-group-item"><strong>Descripción: </strong>@producto.descripcion</li>
                             <li class="list-group-item"><strong>Precio: </strong>@producto.precio</li>
-                            <li class="list-group-item"><strong>Celular: </strong>@producto.celular</li>
+    
                             <li class="list-group-item"><strong>Lugar: </strong>@producto.lugarcompraproducto</li>
                             <li class="list-group-item"><strong>Usuario: </strong>@producto.usuario</li>
                         </ul>

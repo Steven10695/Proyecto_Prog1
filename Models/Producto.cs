@@ -9,7 +9,7 @@ namespace Huerto_Del_valle.Models
     public class Producto
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("id")]
+        [Column("Id")]
         public int id { get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un producto!")]
