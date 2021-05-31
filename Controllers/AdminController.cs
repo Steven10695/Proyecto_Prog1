@@ -37,6 +37,7 @@ namespace Huerto_Del_valle.Controllers
         var productos = _context.Productos.ToList();
             return View(productos);
         }
+       
 
         public IActionResult Producto(){
             return View();

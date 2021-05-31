@@ -28,13 +28,13 @@
                             <li class="list-group-item"><strong>Usuario: </strong>@producto.usuario</li>
                         </ul>
                         <div class="card-body" style="text-align: center;">
-                            <form action="/Home/Eliminar" method="POST">
+                            <form action="/Admin/Eliminar" method="POST">
                                 <input type="hidden" name="Id" value="@producto.id">
                                 <button class="btn btn-danger">Eliminar</button>
                             </form> 
                         </div>
                         <div class="card-body" style="text-align: center;">
-                            <form action="/Home/EditarProducto" method="POST">
+                            <form action="/Admin/EditarProducto" method="POST">
                                 <input type="hidden" name="id" value="@producto.id">
                                 <button class="btn btn-danger">Editar</button>
                             </form>
