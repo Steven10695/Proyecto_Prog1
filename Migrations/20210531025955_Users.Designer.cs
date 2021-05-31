@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Huerto_Del_valle.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210530232822_adminMigration")]
-    partial class adminMigration
+    [Migration("20210531025955_Users")]
+    partial class Users
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
