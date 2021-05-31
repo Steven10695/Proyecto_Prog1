@@ -28,10 +28,10 @@
 
     @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Inicio</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Lista de productos</a>
                         </li>
         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Producto">Productos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Producto">Agregar Producto</a>
                         </li>
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="EditarProducto">Editar Productos</a>
@@ -41,7 +41,7 @@
                         </li>
     }else{
         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Inicio</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Lista de productos</a>
                         </li>
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Carrito">Carrito</a>
