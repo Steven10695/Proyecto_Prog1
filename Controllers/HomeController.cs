@@ -39,6 +39,10 @@ namespace Huerto_Del_valle.Controllers
         {
             return View();
         }
+         public IActionResult QuienesSomos()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
