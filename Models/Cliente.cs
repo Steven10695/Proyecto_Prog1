@@ -7,8 +7,8 @@ namespace Proyecto_Prog1.Models
     public class Cliente
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("Id_Cliente")]
-        public int Id_Cliente{get;set;}
+        [Column("Id")]
+        public int Id {get;set;}
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un Nombre!")]
         [Display(Name="Ingresel Nombres")]

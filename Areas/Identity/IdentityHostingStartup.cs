@@ -15,14 +15,19 @@ namespace Huerto_Del_valle.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
-                services.AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("ApplicationDbContextConnection")));
+            builder.ConfigureServices((context, builder) => {
+                builder.AddDbContext<ApplicationDbContext>(options =>
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<ApplicationDbContext>();
+                options.UseNpgsql(
+
+                    context.Configuration.GetConnectionString("PostgressConnection")));
+            builder.AddDatabaseDeveloperPageExceptionFilter();
+
+            builder.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+                  builder.AddControllersWithViews();
             });
+          
         }
     }
 }
