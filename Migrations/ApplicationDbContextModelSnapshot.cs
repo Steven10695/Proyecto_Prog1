@@ -19,6 +19,34 @@ namespace Huerto_Del_valle.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+            modelBuilder.Entity("Huerto_Del_valle.Models.Consulta", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("addDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("correo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("descripcion")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("t_consulta");
+                });
+
             modelBuilder.Entity("Huerto_Del_valle.Models.Producto", b =>
                 {
                     b.Property<int>("id")
@@ -60,6 +88,38 @@ namespace Huerto_Del_valle.Migrations
                     b.HasKey("id");
 
                     b.ToTable("t_producto");
+                });
+
+            modelBuilder.Entity("Huerto_Del_valle.Models.Reclamo", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("addDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("asunto")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("descripcion")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("telefono")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("t_reclamo");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

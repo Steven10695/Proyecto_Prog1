@@ -43,13 +43,22 @@
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="EditarProducto">Editar Productos</a>
                         </li>
+        <li class="nav-item">
+                             <a class="nav-link text-dark" asp-area="" asp-controller="Consulta" asp-action="Consultas">Consultas</a>
+                        </li>
+        <li class="nav-item">
+                             <a class="nav-link text-dark" asp-area="" asp-controller="Reclamo" asp-action="Reclamos">Reclamos</a>
+                        </li>
     }else{
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
     </li>
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Carrito">Carrito</a>
-                        </li> 
+                        </li>
+    <li class="nav-item">
+                             <a class="nav-link text-dark" asp-area="" asp-controller="Reclamo" asp-action="Reclamo">Realizar Reclamo</a>
+                        </li>
     }
 }else{
     <li class="nav-item">
@@ -57,8 +66,8 @@
                           
     </li>
     <li class="nav-item">
-         <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Nuestros Productos</a>
-    </li>
+                             <a class="nav-link text-dark" asp-area="" asp-controller="Consulta" asp-action="Consulta">Realizar Consulta</a>
+                        </li>
 }
 
                     </ul>
