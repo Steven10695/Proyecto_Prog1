@@ -14,21 +14,27 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Proyecto_Prog1</a>
+                @if (SignInManager.IsSignedIn(User)){
+                    @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Proyecto_Prog1</a>
+                    }else{
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="IndexNC">Proyecto_Prog1</a>
+                    }
+                }else{
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="IndexNC">Proyecto_Prog1</a>
+                }
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         @if (SignInManager.IsSignedIn(User))
 {
 
     @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Lista de productos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Producto">Agregar Producto</a>
@@ -36,20 +42,18 @@
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="EditarProducto">Editar Productos</a>
                         </li>
-        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Index</a>
-                        </li>
     }else{
         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Lista de productos</a>
-                        </li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="IndexNC">Home</a>
+    </li>
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Carrito">Carrito</a>
                         </li> 
     }
-}
-else
-{
+}else{
+    <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="IndexNC">Home</a>
+    </li>
 }
 
                     </ul>

@@ -41,6 +41,13 @@ namespace Huerto_Del_valle.Controllers
             var productos = _context.Productos.Where(p => p.addDate == fecha).ToList();
             return View();
         }
+
+        public IActionResult IndexNC()
+        {
+            DateTime fecha= DateTime.Today.AddDays(-7);
+            var productos = _context.Productos.Where(p => p.addDate == fecha).ToList();
+            return View();
+        }
         
 
         public IActionResult Privacy()
@@ -70,6 +77,7 @@ namespace Huerto_Del_valle.Controllers
             }
             return View(p);
         }
+
         [HttpPost]
         public IActionResult Eliminar(int id)
         {
