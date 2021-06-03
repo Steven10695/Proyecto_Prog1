@@ -1,4 +1,7 @@
-﻿@model Producto
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model Producto
 @{
     ViewData["Title"] = "Solicitudes de productos añadidas";
 }
@@ -24,12 +27,4 @@
             <button type="button" class="btn btn-secondary">Ver  Productos</button>
             </a>
         </div>
-        
-
-        <div style="text-align: center; margin-top: 15px;">
-            <a asp-controller="Admin" asp-action="Producto">
-                <button type="button" class="btn btn-secondary">Agregar nuevos productos</button></a>
-        </div>
-        
-    </div>
 </body>

@@ -23,6 +23,11 @@ namespace Huerto_Del_valle.Controllers
             return View();
         }
 
+        public IActionResult IndexNC()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

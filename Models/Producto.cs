@@ -1,11 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Huerto_Del_valle.Models
 {
+      [Table("t_producto")]
     public class Producto
     {
-            public int id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("Id")]
+        public int id { get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un producto!")]
         [Display(Name="Nombre del producto")]
@@ -22,10 +27,6 @@ namespace Huerto_Del_valle.Models
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un precio!")]
         [Display(Name="Precio a pagar")]
         public double precio { get; set; }
-        
-        [Required(ErrorMessage="¡Espacio en blanco, Ingrese un número de contacto!")]
-        [Display(Name="Celular para contacto")]       
-        public int celular { get; set; }
  
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un lugar de compra del producto!")]
         [Display(Name="Lugar de compra del producto")]
@@ -37,6 +38,9 @@ namespace Huerto_Del_valle.Models
 
         [Required]
         public DateTime addDate { get; set; }
-         public ICollection<Categoria> Categorias {get; set;}
+
+         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un lugar de compra del producto!")]
+        [Display(Name="Ingrese el tipo de producto!")]
+         public string tipo_producto {get; set;}
     }
 }
