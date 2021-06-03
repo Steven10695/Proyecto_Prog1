@@ -35,14 +35,14 @@ namespace Huerto_Del_valle.Controllers
             }
         }
 
-        public IActionResult Index()
+        public IActionResult IndexNC()
         {
             DateTime fecha= DateTime.Today.AddDays(-7);
             var productos = _context.Productos.Where(p => p.addDate == fecha).ToList();
             return View();
         }
 
-        public IActionResult IndexNC()
+        public IActionResult Index()
         {
             DateTime fecha= DateTime.Today.AddDays(-7);
             var productos = _context.Productos.Where(p => p.addDate == fecha).ToList();
