@@ -18,10 +18,10 @@
                     @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
                         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="IndexNC">Huerto del Valle</a>
                     }else{
-                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Huerto del Valle</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">El Huerto del Valle</a>
                     }
                 }else{
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Huerto del Valle</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">El Huerto del Valle</a>
                     
                 }
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -34,14 +34,12 @@
 {
 
     @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
-        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="IndexNC">Home</a>
-                        </li>
+        
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Producto">Agregar Producto</a>
                         </li>
         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="EditarProducto">Editar Productos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Productos</a>
                         </li>
         <li class="nav-item">
                              <a class="nav-link text-dark" asp-area="" asp-controller="Consulta" asp-action="Consultas">Consultas</a>
@@ -51,7 +49,7 @@
                         </li>
     }else{
         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Productos</a>
     </li>
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Carrito">Carrito</a>
