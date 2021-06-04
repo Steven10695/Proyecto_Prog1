@@ -53,7 +53,7 @@ namespace Huerto_Del_valle.Controllers
             var consultas = _context.Consulta.FirstOrDefault(c => c.id == id);
             _context.Remove(consultas);
             _context.SaveChanges();
-            return RedirectToAction("HuertodelValle");
+            return RedirectToAction("Consultas");
         }
         
 

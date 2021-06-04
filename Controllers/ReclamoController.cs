@@ -50,10 +50,10 @@ namespace Huerto_Del_valle.Controllers
     [HttpPost]
         public IActionResult Eliminar(int id)
         {
-            var reclamos = _context.Reclamo.FirstOrDefault(c => c.id == id);
+            var reclamos = _context.Reclamo.FirstOrDefault(r => r.id == id);
             _context.Remove(reclamos);
             _context.SaveChanges();
-            return RedirectToAction("HuertodelValle");
+            return RedirectToAction("Reclamos");
         }
         
 
