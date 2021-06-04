@@ -16,12 +16,12 @@
             <div class="container">
                 @if (SignInManager.IsSignedIn(User)){
                     @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
-                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="IndexNC">Proyecto_Prog1</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="IndexNC">Huerto del Valle</a>
                     }else{
-                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Proyecto_Prog1</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Huerto del Valle</a>
                     }
                 }else{
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Proyecto_Prog1</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Huerto del Valle</a>
                     
                 }
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -62,11 +62,15 @@
     }
 }else{
     <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Productos</a>
                           
     </li>
     <li class="nav-item">
-                             <a class="nav-link text-dark" asp-area="" asp-controller="Consulta" asp-action="Consulta">Realizar Consulta</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="QuienesSomos">Quienes Somos</a>
+                          
+    </li>
+    <li class="nav-item">
+                             <a class="nav-link text-dark" asp-area="" asp-controller="Consulta" asp-action="Consulta">Contáctanos</a>
                         </li>
 }
 
@@ -83,7 +87,7 @@
     </div>
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - Proyecto_Prog1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2021 - Huerto del Valle - <a asp-area="" asp-controller="Consulta" asp-action="Consulta">Tienes alguna duda? Contáctanos!</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
