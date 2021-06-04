@@ -36,13 +36,13 @@
                         <div class="card-body" style="text-align: center;">
                             <form action="/Admin/EditarProducto" method="POST">
                                 <input type="hidden" name="id" value="@producto.id">
-                                <button class="btn btn-danger">Editar</button>
+                                <button class="btn btn-outline-warning">Editar</button>
                             </form>
                         </div>
                 <div class="card-body" style="text-align: center;">
                             <form action="/Admin/Eliminar" method="POST">
                                 <input type="hidden" name="Id" value="@producto.id">
-                                <button class="btn btn-danger">Eliminar</button>
+                                <button class="btn btn-outline-danger">Eliminar</button>
                             </form> 
                         </div>
                 </div>
@@ -64,12 +64,12 @@
                             <li class="list-group-item"><strong>Precio: </strong>@producto.precio</li>
     
                             <li class="list-group-item"><strong>Lugar: </strong>@producto.lugarcompraproducto</li>
-                            <li class="list-group-item"><strong>Usuario: </strong>@producto.usuario</li>
+                            
                         </ul>
                         <div class="card-body" style="text-align: center;">
                             <form action="/Admin/EditarProducto" method="POST">
                                 <input type="hidden" name="id" value="@producto.id">
-                                <button class="btn btn-danger">Añadir al Carrito</button>
+                                <button class="btn btn-outline-warning">Añadir al Carrito</button>
                             </form>
                         </div>
                 </div>
@@ -92,12 +92,12 @@
                             <li class="list-group-item"><strong>Precio: </strong>@producto.precio</li>
     
                             <li class="list-group-item"><strong>Lugar: </strong>@producto.lugarcompraproducto</li>
-                            <li class="list-group-item"><strong>Usuario: </strong>@producto.usuario</li>
+                            
                         </ul>
                         <div class="card-body" style="text-align: center;">
                             <form>
                                 <a asp-area="Identity" asp-page="/Account/Login"> 
-            <button type="button" class="btn btn-secondary">Añadir al Carrito</button>
+            <button type="button" class="btn btn-outline-warning">Añadir al Carrito</button>
             </a>
                             </form> 
                         </div>
