@@ -274,13 +274,15 @@ namespace Huerto_Del_valle.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("numeric");
 
-                    b.Property<int>("ProductoId")
+                    b.Property<int?>("ProductoIdid")
                         .HasColumnType("integer");
 
                     b.Property<string>("UserId")
                         .HasColumnType("text");
 
                     b.HasKey("id");
+
+                    b.HasIndex("ProductoIdid");
 
                     b.ToTable("t_proforma");
                 });
@@ -334,6 +336,15 @@ namespace Huerto_Del_valle.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Proyecto_Prog1.Models.Proforma", b =>
+                {
+                    b.HasOne("Huerto_Del_valle.Models.Producto", "ProductoId")
+                        .WithMany()
+                        .HasForeignKey("ProductoIdid");
+
+                    b.Navigation("ProductoId");
                 });
 #pragma warning restore 612, 618
         }

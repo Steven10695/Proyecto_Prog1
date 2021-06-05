@@ -1,6 +1,7 @@
 using System; 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Huerto_Del_valle.Models;
 
 namespace Proyecto_Prog1.Models
 {
@@ -14,7 +15,7 @@ namespace Proyecto_Prog1.Models
         [Display(Name="Usuario_Id")]
         public String UserId { get; set; }
         [Display(Name="Producto_Id")]
-        public int ProductoId { get; set; }
+        public Producto ProductoId { get; set; }
         [Display(Name="Cantidad")]
         public int Cantidad { get; set; }
         [Display(Name="Precio")]

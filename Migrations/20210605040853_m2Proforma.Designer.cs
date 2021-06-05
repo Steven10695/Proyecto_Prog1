@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Huerto_Del_valle.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210604052730_ProformaMigration")]
-    partial class ProformaMigration
+    [Migration("20210605040853_m2Proforma")]
+    partial class m2Proforma
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +19,7 @@ namespace Huerto_Del_valle.Migrations
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.6")
-                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);          
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
             modelBuilder.Entity("Proyecto_Prog1.Models.Proforma", b =>
                 {
@@ -35,7 +35,7 @@ namespace Huerto_Del_valle.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("numeric");
 
-                    b.Property<int>("ProductoId")
+                    b.Property<int?>("ProductoIdid")
                         .HasColumnType("integer");
 
                     b.Property<string>("UserId")
@@ -43,10 +43,20 @@ namespace Huerto_Del_valle.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("ProductoIdid");
+
                     b.ToTable("t_proforma");
                 });
 
-           
+
+            modelBuilder.Entity("Proyecto_Prog1.Models.Proforma", b =>
+                {
+                    b.HasOne("Huerto_Del_valle.Models.Producto", "ProductoId")
+                        .WithMany()
+                        .HasForeignKey("ProductoIdid");
+
+                    b.Navigation("ProductoId");
+                });
 #pragma warning restore 612, 618
         }
     }
