@@ -27,7 +27,7 @@ namespace Huerto_Del_valle.Controllers
         public async Task<IActionResult> Add(int? id){
             var userID = _userManager.GetUserName(User);
             if(userID == null){
-                ViewData["Message"] = "Por favor debe loguearse";
+                ViewData["Message"] = "Por favor debe loggearse";
                 return  View("Index");
             }else{
                 await _context.SaveChangesAsync();
@@ -60,7 +60,17 @@ namespace Huerto_Del_valle.Controllers
         var productos = _context.Productos.ToList();
             return View(productos);
         }
+        /*
+        [HttpGet]
+        public IActionResult BuscarProducto(Producto p){
        
+        if(ModelState.IsValid && p.Equals(_context.Productos)){
+           var productos = _context.Productos.ToList();
+
+            return Redirect ToAction(productos);
+        }
+            return View("HuertodelValle");
+        }*/
 
         public IActionResult Producto(){
             return View();

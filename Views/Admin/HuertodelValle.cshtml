@@ -8,9 +8,15 @@
 <body style="background-color: #fff;">  
 <div class="text-center" style="margin-top: 50px;">
     <h1 class="display-4">Lista de Productos</h1>
-</div>
+    <br>
 
-
+<div class="box" margin="top-center">
+        <div class="input-group my-3 px-0"><!--Caja de busqueda-->
+            <input type="search" class="src" placeholder="Buscar producto" aria-label="Busqueda" aria-describedby="search-addon" />
+            <button type="button" class="buscar btn-primary" >Buscar</button>
+        </div>
+    
+<br>
 <div style="margin-top: 30px;" >
     <div class="row">
          @if (SignInManager.IsSignedIn(User))
@@ -19,6 +25,8 @@
     @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
        @foreach (var producto in Model)
         { 
+             
+
             <span class="border border-warning">
             <div class="col-lg-4" >
                 <div class="card" style="width: 18rem; margin-bottom: 20px;">
