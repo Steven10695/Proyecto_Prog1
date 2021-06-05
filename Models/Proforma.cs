@@ -19,7 +19,7 @@ namespace Proyecto_Prog1.Models
         [Display(Name="Cantidad")]
         public int Cantidad { get; set; }
         [Display(Name="Precio")]
-        public decimal Precio { get; set; }
+        public double Precio { get; set; }
 
     }
 }

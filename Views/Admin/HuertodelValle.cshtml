@@ -69,7 +69,7 @@
                         <div class="card-body" style="text-align: center;">
                             <form action="/Admin/EditarProducto" method="POST">
                                 <input type="hidden" name="id" value="@producto.id">
-                                <button class="btn btn-danger">Añadir al Carrito</button>
+                                <button class="btn btn-danger" asp-action="Add" asp-route-id="@producto.id">Añadir al Carrito</button>
                             </form>
                         </div>
                 </div>
