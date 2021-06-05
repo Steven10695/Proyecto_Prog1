@@ -63,12 +63,12 @@ namespace Huerto_Del_valle.Controllers
         /*
         [HttpGet]
         public IActionResult BuscarProducto(Producto p){
-       
-        if(ModelState.IsValid && p.Equals(_context.Productos)){
-           var productos = _context.Productos.ToList();
 
-            return Redirect ToAction(productos);
-        }
+            var productos = _context.Productos.ToList();
+            if(productos.Equals(p)){
+                return View(productos);
+            }
+            
             return View("HuertodelValle");
         }*/
 
