@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Huerto_Del_valle.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210605040853_m2Proforma")]
-    partial class m2Proforma
+    [Migration("20210605060732_mproforma")]
+    partial class mproforma
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace Huerto_Del_valle.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-            modelBuilder.Entity("Proyecto_Prog1.Models.Proforma", b =>
+            modelBuilder.Entity("Huerto_Del_valle.Models.Producto", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -29,34 +29,42 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnName("Id")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int>("Cantidad")
-                        .HasColumnType("integer");
+                    b.Property<DateTime>("addDate")
+                        .HasColumnType("timestamp without time zone");
 
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("numeric");
+                    b.Property<string>("descripcion")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<int?>("ProductoIdid")
-                        .HasColumnType("integer");
+                    b.Property<string>("lugarcompraproducto")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<string>("UserId")
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<double>("precio")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("tipo_producto")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("url_producto")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("usuario")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("id");
 
-                    b.HasIndex("ProductoIdid");
-
-                    b.ToTable("t_proforma");
+                    b.ToTable("t_producto");
                 });
 
-
-            modelBuilder.Entity("Proyecto_Prog1.Models.Proforma", b =>
-                {
-                    b.HasOne("Huerto_Del_valle.Models.Producto", "ProductoId")
-                        .WithMany()
-                        .HasForeignKey("ProductoIdid");
-
-                    b.Navigation("ProductoId");
-                });
+          
 #pragma warning restore 612, 618
         }
     }
