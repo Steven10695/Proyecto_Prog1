@@ -26,7 +26,7 @@ namespace Huerto_Del_valle.Models
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un precio!")]
         [Display(Name="Precio a pagar")]
-        public decimal precio { get; set; }
+        public double precio { get; set; }
  
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese un lugar de compra del producto!")]
         [Display(Name="Lugar de compra del producto")]
