@@ -77,8 +77,8 @@ namespace Huerto_Del_valle.Controllers
             var listProd= _context.Productos.OrderBy(s => s.id).ToList();
             
             
-                listProd=_context.Productos.Where(c => c.nombre.ToUpper().Contains(filtro.ToUpper())).OrderBy(s=>s.id) .ToList();
-            
+                listProd=_context.Productos.Where(c => c.nombre.ToUpper().Contains(filtro.ToUpper())).OrderBy(s=>s.id) .ToList(); 
+               
             return View(listProd);
         }
         public IActionResult Producto(){
