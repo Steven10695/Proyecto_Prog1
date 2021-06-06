@@ -3,17 +3,20 @@
 @inject UserManager<IdentityUser> UserManager
 @model IEnumerable<Huerto_Del_valle.Models.Producto>
 @{
-    ViewData["Title"] = "Solicitudes de productos añadidas";
+    ViewData["Title"] = "Productos";
 }
 <body style="background-color: #fff;">  
 <div class="text-center" style="margin-top: 50px;">
     <h1 class="display-4">Lista de Productos</h1>
     <br>
 
-<div class="box" margin="top-center">
-        <div class="input-group my-3 px-0">
-            <input type="search" class="src" placeholder="Buscar producto" aria-label="Busqueda" aria-describedby="search-addon"/>
-            <button type="button" class="buscar btn-primary" >Buscar</button>
+
+                 <form class="d-flex" method="POST">
+                    <input class="form-control me-2" type="text" name="filtro" placeholder="Buscar producto..." required>
+                    <button class="btn btn-outline-info" >Buscar</button>
+                     <a href="HuertodelValle" class="btn btn-outline-info" role="button">Catálogo</a>
+                     
+                </form>
 <!--
             @foreach (var p in Model)
             {
