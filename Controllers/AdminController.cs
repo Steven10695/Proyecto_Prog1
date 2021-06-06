@@ -71,7 +71,16 @@ namespace Huerto_Del_valle.Controllers
             
             return View("HuertodelValle");
         }*/
-
+         [HttpPost]
+        public IActionResult HuertodelValle(string filtro)
+        {
+            var listProd= _context.Productos.OrderBy(s => s.id).ToList();
+            
+            
+                listProd=_context.Productos.Where(c => c.nombre.ToUpper().Contains(filtro.ToUpper())).OrderBy(s=>s.id) .ToList();
+            
+            return View(listProd);
+        }
         public IActionResult Producto(){
             return View();
         }
