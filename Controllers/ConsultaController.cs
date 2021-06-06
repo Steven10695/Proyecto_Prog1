@@ -62,6 +62,7 @@ namespace Huerto_Del_valle.Controllers
         var consultas = _context.Consulta.ToList();
             return View(consultas);
         }
+        
 
     }
 }
