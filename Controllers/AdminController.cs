@@ -133,7 +133,24 @@ namespace Huerto_Del_valle.Controllers
             }
             return View(p);
         }
-      public async Task<IActionResult> Add(int id)
+        public async Task<IActionResult> DetallesProforma(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var proforma = await _context.Proforma
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (proforma == null)
+            {
+                return NotFound();
+            }
+
+            return View(proforma);
+        }
+
+      public async Task<IActionResult> Agregar(int? id)
         {
             var userID = _userManager.GetUserName(User);
             if(userID == null){ 
@@ -147,8 +164,17 @@ namespace Huerto_Del_valle.Controllers
                 proforma.UserId = userID;
                 _context.Add(proforma);
                 await _context.SaveChangesAsync();
-                return  RedirectToAction("Producto");
+                return  RedirectToAction("MostrarProforma");
             }
+        }
+     public async Task<IActionResult> MostrarProforma()
+        {
+                 var userID = _userManager.GetUserName(User);
+            var items = from o in _context.Proforma select o;
+            items = items.
+                Include(p => p.ProductoId).
+                Where(s => s.UserId.Equals(userID));
+            return View(await _context.Proforma.ToListAsync());
         }
 
    

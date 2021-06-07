@@ -46,7 +46,7 @@ namespace Proyecto_Prog1.Controllers
                 return  RedirectToAction("Producto");
             }
         }
-
 */
+
     }
 }

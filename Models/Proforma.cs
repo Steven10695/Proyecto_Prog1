@@ -20,6 +20,6 @@ namespace Proyecto_Prog1.Models
         public int Cantidad { get; set; }
         [Display(Name="Precio")]
         public double Precio { get; set; }
-
+    
     }
 }
