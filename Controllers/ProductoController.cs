@@ -4,7 +4,7 @@ using Huerto_Del_valle.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Proyecto_Prog1.Models;
+using Huerto_Del_valle.Models;
 
 namespace Proyecto_Prog1.Controllers
 {
