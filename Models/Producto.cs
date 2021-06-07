@@ -42,5 +42,6 @@ namespace Huerto_Del_valle.Models
          [Required(ErrorMessage="¡Espacio en blanco, Ingrese un lugar de compra del producto!")]
         [Display(Name="Ingrese el tipo de producto!")]
          public string tipo_producto {get; set;}
+         public virtual ICollection<Proforma> ProformaItems { get; set; }
     }
 }
