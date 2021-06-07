@@ -9,7 +9,7 @@ using Huerto_Del_valle.Models;
 using Huerto_Del_valle.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using Proyecto_Prog1.Models;
+
 
 namespace Proyecto_Prog1.Controllers
 
