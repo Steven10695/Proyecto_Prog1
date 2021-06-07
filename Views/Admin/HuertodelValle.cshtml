@@ -3,14 +3,23 @@
 @inject UserManager<IdentityUser> UserManager
 @model IEnumerable<Huerto_Del_valle.Models.Producto>
 @{
-    ViewData["Title"] = "Solicitudes de productos añadidas";
+    ViewData["Title"] = "Productos";
 }
 <body style="background-color: #fff;">  
 <div class="text-center" style="margin-top: 50px;">
     <h1 class="display-4">Lista de Productos</h1>
+    <br>
+
+
+                 <form class="d-flex" method="POST">
+                    <input class="form-control me-2" type="text" name="filtro" placeholder="Buscar producto..." required>
+                    <button class="btn btn-outline-info" >Buscar</button>
+                     <a href="HuertodelValle" class="btn btn-outline-info" role="button">Catálogo</a>
+                     
+                </form>
+
 </div>
-
-
+<br>
 <div style="margin-top: 30px;" >
     <div class="row">
          @if (SignInManager.IsSignedIn(User))
@@ -19,6 +28,8 @@
     @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
        @foreach (var producto in Model)
         { 
+             
+
             <span class="border border-warning">
             <div class="col-lg-4" >
                 <div class="card" style="width: 18rem; margin-bottom: 20px;">
@@ -31,18 +42,18 @@
                             <li class="list-group-item"><strong>Precio: </strong>@producto.precio</li>
     
                             <li class="list-group-item"><strong>Lugar: </strong>@producto.lugarcompraproducto</li>
-                            <li class="list-group-item"><strong>Usuario: </strong>@producto.usuario</li>
+                            <li class="list-group-item"><strong>Categoría: </strong>@producto.tipo_producto</li>
                         </ul>
                         <div class="card-body" style="text-align: center;">
                             <form action="/Admin/EditarProducto" method="POST">
                                 <input type="hidden" name="id" value="@producto.id">
-                                <button class="btn btn-danger">Editar</button>
+                                <button class="btn btn-outline-warning">Editar</button>
                             </form>
                         </div>
                 <div class="card-body" style="text-align: center;">
                             <form action="/Admin/Eliminar" method="POST">
                                 <input type="hidden" name="Id" value="@producto.id">
-                                <button class="btn btn-danger">Eliminar</button>
+                                <button class="btn btn-outline-danger">Eliminar</button>
                             </form> 
                         </div>
                 </div>
@@ -62,9 +73,9 @@
                         <ul class="list-group list-group-flush" >
                             <li class="list-group-item"><strong>Descripción: </strong>@producto.descripcion</li>
                             <li class="list-group-item"><strong>Precio: </strong>@producto.precio</li>
-    
-                            <li class="list-group-item"><strong>Lugar: </strong>@producto.lugarcompraproducto</li>
-                            <li class="list-group-item"><strong>Usuario: </strong>@producto.usuario</li>
+                            <li class="list-group-item"><strong>Categoría: </strong>@producto.tipo_producto</li>
+                            
+                            
                         </ul>
                         <div class="card-body" style="text-align: center;">
                             <form action="" method="POST">
@@ -91,13 +102,13 @@
                             <li class="list-group-item"><strong>Descripción: </strong>@producto.descripcion</li>
                             <li class="list-group-item"><strong>Precio: </strong>@producto.precio</li>
     
-                            <li class="list-group-item"><strong>Lugar: </strong>@producto.lugarcompraproducto</li>
-                            <li class="list-group-item"><strong>Usuario: </strong>@producto.usuario</li>
+                            <li class="list-group-item"><strong>Categoría: </strong>@producto.tipo_producto</li>
+                            
                         </ul>
                         <div class="card-body" style="text-align: center;">
                             <form>
                                 <a asp-area="Identity" asp-page="/Account/Login"> 
-            <button type="button" class="btn btn-secondary">Añadir al Carrito</button>
+            <button type="button" class="btn btn-outline-warning">Añadir al Carrito</button>
             </a>
                             </form> 
                         </div>

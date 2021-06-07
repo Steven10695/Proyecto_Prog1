@@ -28,7 +28,7 @@ namespace Huerto_Del_valle.Controllers
         public async Task<IActionResult> Add(int? id){
             var userID = _userManager.GetUserName(User);
             if(userID == null){
-                ViewData["Message"] = "Por favor debe loguearse";
+                ViewData["Message"] = "Por favor debe loggearse";
                 return  View("Index");
             }else{
                 await _context.SaveChangesAsync();
@@ -36,14 +36,14 @@ namespace Huerto_Del_valle.Controllers
             }
         }
 
-        public IActionResult Index()
+        public IActionResult IndexNC()
         {
             DateTime fecha= DateTime.Today.AddDays(-7);
             var productos = _context.Productos.Where(p => p.addDate == fecha).ToList();
             return View();
         }
 
-        public IActionResult IndexNC()
+        public IActionResult Index()
         {
             DateTime fecha= DateTime.Today.AddDays(-7);
             var productos = _context.Productos.Where(p => p.addDate == fecha).ToList();
@@ -61,8 +61,27 @@ namespace Huerto_Del_valle.Controllers
         var productos = _context.Productos.ToList();
             return View(productos);
         }
-       
+        /*
+        [HttpGet]
+        public IActionResult BuscarProducto(Producto p){
 
+            var productos = _context.Productos.ToList();
+            if(productos.Equals(p)){
+                return View(productos);
+            }
+            
+            return View("HuertodelValle");
+        }*/
+         [HttpPost]
+        public IActionResult HuertodelValle(string filtro)
+        {
+            var listProd= _context.Productos.OrderBy(s => s.id).ToList();
+            
+            
+                listProd=_context.Productos.Where(c => c.nombre.ToUpper().Contains(filtro.ToUpper())).OrderBy(s=>s.id) .ToList(); 
+               
+            return View(listProd);
+        }
         public IActionResult Producto(){
             return View();
         }

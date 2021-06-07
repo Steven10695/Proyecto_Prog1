@@ -1,0 +1,41 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model IEnumerable<Huerto_Del_valle.Models.Consulta>
+@{
+    ViewData["Title"] = "Consultas recibidas";
+}
+<body style="background-color: #fff;">  
+<div class="text-center" style="margin-top: 50px;">
+    <h1 class="display-4">Consultas</h1>
+</div>
+
+<div style="margin-top: 30px;" >
+    <div class="row">
+         
+       @foreach (var consulta in Model)
+        { 
+            <span class="border border-warning">
+            <div class="col-lg-4" >
+                <div class="card" style="width: 18rem; margin-bottom: 20px;">
+                        <div class="card-body" style="text-align: center; margin-top: 10px;">
+                            <h5 class="card-title">@consulta.nombre</h5>
+                        </div>
+                        <ul class="list-group list-group-flush" >
+                            <li class="list-group-item"><strong>Correo: </strong>@consulta.correo</li>
+                            <li class="list-group-item"><strong>Descripción: </strong>@consulta.descripcion</li>
+                        </ul>
+                <div class="card-body" style="text-align: center;">
+                            <form action="/Consulta/Eliminar" method="POST">
+                                <input type="hidden" name="Id" value="@consulta.id">
+                                <button class="btn btn-outline-primary">Eliminar</button>
+                            </form> 
+                        </div>
+                </div>
+            </div>
+            </span>
+        }
+    
+    </div>
+</div>
+</body>

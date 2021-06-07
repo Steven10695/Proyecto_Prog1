@@ -1,0 +1,42 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model IEnumerable<Huerto_Del_valle.Models.Reclamo>
+@{
+    ViewData["Title"] = "Reclamos recibidos";
+}
+<body style="background-color: #fff;">  
+<div class="text-center" style="margin-top: 50px;">
+    <h1 class="display-4">Reclamos</h1>
+</div>
+
+<div style="margin-top: 30px;" >
+    <div class="row">
+         
+       @foreach (var reclamo in Model)
+        { 
+            <span class="border border-warning">
+            <div class="col-lg-4" >
+                <div class="card" style="width: 18rem; margin-bottom: 20px;">
+                        <div class="card-body" style="text-align: center; margin-top: 10px;">
+                            <h5 class="card-title">@reclamo.nombre</h5>
+                        </div>
+                        <ul class="list-group list-group-flush" >
+                            <li class="list-group-item"><strong>Teléfono: </strong>@reclamo.telefono</li>
+                            <li class="list-group-item"><strong>Asunto: </strong>@reclamo.asunto</li>
+                            <li class="list-group-item"><strong>Descripción: </strong>@reclamo.descripcion</li>
+                        </ul>
+                <div class="card-body" style="text-align: center;">
+                            <form action="/Reclamo/Eliminar" method="POST">
+                                <input type="hidden" name="Id" value="@reclamo.id">
+                                <button class="btn btn-outline-danger">Resuelto</button>
+                            </form> 
+                        </div>
+                </div>
+            </div>
+            </span>
+        }
+    
+    </div>
+</div>
+</body>
