@@ -4,7 +4,7 @@ using System.Text;
 using Huerto_Del_valle.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Proyecto_Prog1.Models;
+using Huerto_Del_valle.Models;
 
 
 namespace Huerto_Del_valle.Data
@@ -14,7 +14,7 @@ namespace Huerto_Del_valle.Data
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Consulta> Consulta { get; set; }
         public DbSet<Reclamo> Reclamo { get; set; }
-         public DbSet<Proyecto_Prog1.Models.Proforma> Proforma { get; set; }
+         public DbSet<Proforma> Proforma { get; set; }
      
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
