@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Huerto_Del_valle.Models;
 
-namespace Proyecto_Prog1.Models
+namespace Huerto_Del_valle.Models
 {
     [Table("t_proforma")]
     public class Proforma
