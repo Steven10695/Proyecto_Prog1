@@ -1,53 +1,54 @@
-@model IEnumerable<Proyecto_Prog1.Models.Proforma>
+@model IEnumerable<Huerto_Del_valle.Models.Proforma>
 
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductoId.nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cantidad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Precio)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductoId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cantidad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Precio)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container">
+    <h1>Productos Seleccionados</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center">
+                    Producto
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductoId.nombre)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.Cantidad)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.Precio)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    <div class="text-center">
+                        <img src="@Html.DisplayFor(modelItem => item.ProductoId.url_producto)" width="65px" height="65px" alt="">
+                    </div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductoId.nombre)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Cantidad)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+               
+            </tr>
+    }
+
+            
+        </tbody>
+    </table>
+
+    <div class="text-right">
+        <button class="btn btn-primary"  >Finalizar compra</button>
+    </div>
+
+</div>
