@@ -9,6 +9,7 @@ using Huerto_Del_valle.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Proyecto_Prog1.Models;
 
 namespace Huerto_Del_valle.Controllers
 {
@@ -113,5 +114,24 @@ namespace Huerto_Del_valle.Controllers
             }
             return View(p);
         }
+      public async Task<IActionResult> Add(int id)
+        {
+            var userID = _userManager.GetUserName(User);
+            if(userID == null){ 
+                return RedirectToAction("Producto");
+            }else{
+                var producto = await _context.Productos.FindAsync(id);
+                Proforma proforma = new Proforma();
+                proforma.ProductoId = producto;
+                proforma.Precio = producto.precio;
+                proforma.Cantidad = 1;
+                proforma.UserId = userID;
+                _context.Add(proforma);
+                await _context.SaveChangesAsync();
+                return  RedirectToAction("Producto");
+            }
+        }
+
+   
     }}
     

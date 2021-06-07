@@ -21,7 +21,7 @@ namespace Proyecto_Prog1.Controllers
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
 
-
+/*
         public CatalogoController(ILogger<CatalogoController> logger,
             ApplicationDbContext context,
             UserManager<IdentityUser> userManager)
@@ -37,6 +37,7 @@ namespace Proyecto_Prog1.Controllers
             var productos = from o in _context.Productos select o;
             return View(await productos.ToListAsync());
         }
+
 
         public async Task<IActionResult> Add(int? id)
         {
@@ -58,7 +59,7 @@ namespace Proyecto_Prog1.Controllers
             }
 
         }        
-
+*/
     }
     
 }

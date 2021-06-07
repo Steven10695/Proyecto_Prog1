@@ -28,7 +28,7 @@ namespace Proyecto_Prog1.Controllers
             var listProductos=_context.Productos.ToList();
             return View(listProductos);
         }
-
+/*
         public async Task<IActionResult> Add(int? id)
         {
             var userID = _userManager.GetUserName(User);
@@ -47,6 +47,6 @@ namespace Proyecto_Prog1.Controllers
             }
         }
 
-
+*/
     }
 }
