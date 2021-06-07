@@ -9,7 +9,8 @@ using Huerto_Del_valle.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using Proyecto_Prog1.Models;
+
+
 
 namespace Huerto_Del_valle.Controllers
 {
@@ -159,6 +160,7 @@ namespace Huerto_Del_valle.Controllers
                 var producto = await _context.Productos.FindAsync(id);
                 Proforma proforma = new Proforma();
                 proforma.ProductoId = producto;
+                
                 proforma.Precio = producto.precio;
                 proforma.Cantidad = 1;
                 proforma.UserId = userID;
@@ -174,7 +176,7 @@ namespace Huerto_Del_valle.Controllers
             items = items.
                 Include(p => p.ProductoId).
                 Where(s => s.UserId.Equals(userID));
-            return View(await _context.Proforma.ToListAsync());
+            return View(await items.ToListAsync());
         }
 
    
