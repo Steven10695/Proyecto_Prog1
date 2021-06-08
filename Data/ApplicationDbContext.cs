@@ -13,6 +13,7 @@ namespace Huerto_Del_valle.Data
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Consulta> Consulta { get; set; }
         public DbSet<Reclamo> Reclamo { get; set; }
+         public DbSet<Proforma> Proforma { get; set; }
      
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
