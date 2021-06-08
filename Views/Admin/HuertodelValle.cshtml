@@ -73,9 +73,9 @@
                             <li class="list-group-item"><strong>Categoría: </strong>@producto.tipo_producto</li>
                         </ul>
                         <div class="card-body" style="text-align: center;">
-                            <form action="/Admin/EditarProducto" method="POST">
+                            <form action="EditarProducto" method="POST">
                                 <input type="hidden" name="id" value="@producto.id">
-                                <button class="btn btn-outline-warning">Editar</button>
+                                <a asp-action="EditarProducto" asp-route-id="@producto.id" class="btn btn-outline-warning" >Editar el producto</a>
                             </form>
                         </div>
                 <div class="card-body" style="text-align: center;">
@@ -108,7 +108,7 @@
                         <div class="card-body" style="text-align: center;">
                              <form action="" method="POST">
                                 <input type="hidden" name="id" value="@producto.id">
-                                <button class="btn btn-danger" asp-action="Agregar" asp-route-id="@producto.id">Añadir al Carrito</button>
+                                <button class="btn btn-outline-success" asp-action="Agregar" asp-route-id="@producto.id">Añadir al Carrito</button>
                             </form>
                         </div>
                 </div>
