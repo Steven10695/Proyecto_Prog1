@@ -132,5 +132,57 @@ namespace Huerto_Del_valle.Controllers
             }
             return View(p);
         }
+        public async Task<IActionResult> DetallesProforma(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var proforma = await _context.Proforma
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (proforma == null)
+            {
+                return NotFound();
+            }
+
+            return View(proforma);
+        }
+
+      public async Task<IActionResult> Agregar(int? id)
+        {
+            var userID = _userManager.GetUserName(User);
+            if(userID == null){ 
+                return RedirectToAction("Producto");
+            }else{
+                var producto = await _context.Productos.FindAsync(id);
+                Proforma proforma = new Proforma();
+                proforma.ProductoId = producto;
+                
+                proforma.Precio = producto.precio;
+                proforma.Cantidad = 1;
+                proforma.UserId = userID;
+                _context.Add(proforma);
+                await _context.SaveChangesAsync();
+                return  RedirectToAction("MostrarProforma");
+            }
+        }
+     public async Task<IActionResult> MostrarProforma()
+        {
+                 var userID = _userManager.GetUserName(User);
+            var items = from o in _context.Proforma select o;
+            items = items.
+                Include(p => p.ProductoId).
+                Where(s => s.UserId.Equals(userID));
+            return View(await items.ToListAsync());
+        }
+
+       public IActionResult EliminarProforma(int id) 
+        {
+            var Producto= _context.Proforma.Find(id);
+            _context.Remove(Producto);
+            _context.SaveChanges();
+            return RedirectToAction("MostrarProforma");
+        }
     }}
     
