@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Huerto_Del_valle.Models;
+﻿using Huerto_Del_valle.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Huerto_Del_valle.Models;
 
 
 namespace Huerto_Del_valle.Data

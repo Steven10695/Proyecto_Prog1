@@ -39,7 +39,9 @@
                 <td class="text-center">
                     @Html.DisplayFor(modelItem => item.Precio)
                 </td>
-               
+                <td class="text-center">
+                    <a asp-action="EliminarProforma"  asp-for="@item.ProductoId"style="color: #D52F0B;" ><span class="oi oi-x"></span>Eliminar</a>
+                </td>
             </tr>
     }
 
