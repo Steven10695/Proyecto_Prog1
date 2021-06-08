@@ -106,9 +106,9 @@
                             
                         </ul>
                         <div class="card-body" style="text-align: center;">
-                            <form action="/Admin/EditarProducto" method="POST">
+                             <form action="" method="POST">
                                 <input type="hidden" name="id" value="@producto.id">
-                                <button class="btn btn-outline-warning">Añadir al Carrito</button>
+                                <button class="btn btn-danger" asp-action="Agregar" asp-route-id="@producto.id">Añadir al Carrito</button>
                             </form>
                         </div>
                 </div>
