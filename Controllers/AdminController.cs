@@ -179,12 +179,12 @@ namespace Huerto_Del_valle.Controllers
             return View(await items.ToListAsync());
         }
 
-    public IActionResult EliminarProforma(int id) 
+       public IActionResult EliminarProforma(int id) 
         {
             var Producto= _context.Proforma.Find(id);
             _context.Remove(Producto);
             _context.SaveChanges();
-            return RedirectToAction("EliminarProforma");
+            return RedirectToAction("MostrarProforma");
         }
 
     }}
