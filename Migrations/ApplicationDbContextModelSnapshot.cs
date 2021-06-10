@@ -47,6 +47,65 @@ namespace Huerto_Del_valle.Migrations
                     b.ToTable("t_consulta");
                 });
 
+            modelBuilder.Entity("Huerto_Del_valle.Models.Pago", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("addDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("apellidos")
+                        .HasColumnType("text");
+
+                    b.Property<string>("codigo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("correo")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("direccion")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("distrito")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("dni")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("referencia")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("tarjeta")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("telefono")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("vence")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("t_pago");
+                });
+
             modelBuilder.Entity("Huerto_Del_valle.Models.Producto", b =>
                 {
                     b.Property<int>("id")
@@ -88,6 +147,33 @@ namespace Huerto_Del_valle.Migrations
                     b.HasKey("id");
 
                     b.ToTable("t_producto");
+                });
+
+            modelBuilder.Entity("Huerto_Del_valle.Models.Proforma", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("integer");
+
+                    b.Property<double>("Precio")
+                        .HasColumnType("double precision");
+
+                    b.Property<int?>("ProductoIdid")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("ProductoIdid");
+
+                    b.ToTable("t_proforma");
                 });
 
             modelBuilder.Entity("Huerto_Del_valle.Models.Reclamo", b =>
@@ -318,6 +404,15 @@ namespace Huerto_Del_valle.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Huerto_Del_valle.Models.Proforma", b =>
+                {
+                    b.HasOne("Huerto_Del_valle.Models.Producto", "ProductoId")
+                        .WithMany()
+                        .HasForeignKey("ProductoIdid");
+
+                    b.Navigation("ProductoId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

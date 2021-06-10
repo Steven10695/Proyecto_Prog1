@@ -14,30 +14,30 @@ namespace Huerto_Del_valle.Controllers
 {
     public class PagoController : Controller
     {
-       private readonly ILogger<ConsultaController> _logger;
+       private readonly ILogger<PagoController> _logger;
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
 
 
-        public PagoController(ILogger<ConsultaController> logger, ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        public PagoController(ILogger<PagoController> logger, ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _logger = logger;
             _context=context;
             _userManager = userManager;
         }
 
-    public IActionResult Consulta(){
+    public IActionResult Pago(){
             return View();
         }
          [HttpPost]
           [ValidateAntiForgeryToken]
-    public IActionResult Consulta([Bind("id,nombre,correo,descripcion")]Consulta c)
+    public IActionResult Pago([Bind("id,nombre,apellidos,dni,telefono,correo,distrito,direccion,referencia,tarjeta,vence,codigo")]Pago c)
         {
             if(ModelState.IsValid){
                 _context.Add(c);
                 _context.SaveChanges();
-                 Console.WriteLine("Consulta enviada");
-                return RedirectToAction("Consulta");
+                 Console.WriteLine("Pago enviado");
+                return RedirectToAction("Pago");
             }
             return View(c);
         }
@@ -50,17 +50,21 @@ namespace Huerto_Del_valle.Controllers
     [HttpPost]
         public IActionResult Eliminar(int id)
         {
-            var consultas = _context.Consulta.FirstOrDefault(c => c.id == id);
-            _context.Remove(consultas);
+            var pagos = _context.Pago.FirstOrDefault(p => p.id == id);
+            _context.Remove(pagos);
             _context.SaveChanges();
-            return RedirectToAction("Consultas");
+            return RedirectToAction("Pagos");
+        }
+        public IActionResult Final(){
+            return View();
         }
         
+        
 
-        public IActionResult Consultas()
+        public IActionResult Pagos()
         { 
-        var consultas = _context.Consulta.ToList();
-            return View(consultas);
+        var pagos = _context.Pago.ToList();
+            return View(pagos);
         }
     }
 }

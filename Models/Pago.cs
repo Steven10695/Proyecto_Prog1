@@ -28,7 +28,7 @@ namespace Huerto_Del_valle.Models
         public string telefono{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su correo!")]
-        [Display(Name="Teléfono del Cliente")]    
+        [Display(Name="Correo del cliente")]    
         public string correo{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su distrito!")]
