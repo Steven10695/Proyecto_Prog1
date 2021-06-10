@@ -2,45 +2,64 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 @model IEnumerable<Huerto_Del_valle.Models.Pago>
-@{
-    ViewData["Title"] = "Pagos";
-}
-<body style="background-color: #fff;">  
-<div class="text-center" style="margin-top: 50px;">
-    <h1 class="display-4">Pagos</h1>
-</div>
 
-<div style="margin-top: 30px;" >
-    <div class="row">
-         
-       @foreach (var Pago in Model)
-        { 
-            <span class="border border-warning">
-            <div class="col-lg-4" >
-                <div class="card" style="width: 18rem; margin-bottom: 20px;">
-                        <div class="card-body" style="text-align: center; margin-top: 10px;">
-                            <h5 class="card-title">@Pago.nombre</h5>
-                        </div>
-                        <ul class="list-group list-group-flush" >
-                            <li class="list-group-item"><strong>Apellidos: </strong>@Pago.apellidos</li>
-                            <li class="list-group-item"><strong>DNI: </strong>@Pago.dni</li>
-                            <li class="list-group-item"><strong>Teléfono: </strong>@Pago.telefono</li>
-                            <li class="list-group-item"><strong>Correo: </strong>@Pago.correo</li>
-                            <li class="list-group-item"><strong>Distrito: </strong>@Pago.distrito</li>
-                            <li class="list-group-item"><strong>Dirección: </strong>@Pago.direccion</li>
-                            <li class="list-group-item"><strong>Referencia: </strong>@Pago.referencia</li>
-                        </ul>
-                <div class="card-body" style="text-align: center;">
-                            <form action="/Pago/Eliminar" method="POST">
-                                <input type="hidden" name="Id" value="@Pago.id">
-                                <button class="btn btn-outline-primary">Eliminar PEDIDO</button>
-                            </form> 
-                        </div>
-                </div>
-            </div>
-            </span>
-        }
-    
+<div class="container">
+    <div class="text-center" style="margin-top: 50px;">
+        <h1 class="display-4">Clientes</h1>
     </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.dni)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.telefono)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.correo)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.distrito)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.direccion)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.referencia)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var dato in Model) {
+            <tr>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => dato.nombre) @Html.DisplayFor(modelItem => dato.apellidos)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => dato.dni)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => dato.telefono)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => dato.correo)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => dato.distrito)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => dato.direccion)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => dato.referencia)
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
 </div>
-</body>

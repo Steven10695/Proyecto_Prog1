@@ -13,46 +13,46 @@ namespace Huerto_Del_valle.Models
         public int id { get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su nombre!")]
-        [Display(Name="Nombre del Cliente")]
+        [Display(Name="Nombre")]
         public string nombre{ get; set; }
 
-        [Display(Name="Apellidos del Cliente")]
+        [Display(Name="Apellidos")]
         public string apellidos{ get; set; } 
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su DNI!")]
-        [Display(Name="DNI del Cliente")]
+        [Display(Name="DNI")]
         public string dni{ get; set; } 
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su teléfono!")]
-        [Display(Name="Teléfono del Cliente")]    
+        [Display(Name="Teléfono")]    
         public string telefono{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su correo!")]
-        [Display(Name="Correo del cliente")]    
+        [Display(Name="Correo")]    
         public string correo{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su distrito!")]
-        [Display(Name="Distrito del Cliente")]    
+        [Display(Name="Distrito")]    
         public string distrito{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su dirección!")]
-        [Display(Name="Dirección del Cliente")]    
+        [Display(Name="Dirección")]    
         public string direccion{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese la referencia de su domicilio!")]
-        [Display(Name="Referencia del Cliente")]    
+        [Display(Name="Referencia")]    
         public string referencia{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese el número de la tarjeta!")]
-        [Display(Name="Tarjeta del Cliente")]    
+        [Display(Name="Tarjeta")]    
         public string tarjeta{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese la fecha de vencimiento!")]
-        [Display(Name="Fecha de vencimiento de la Tarjeta")]    
+        [Display(Name="Fecha de vencimiento")]    
         public string vence{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese el código de seguridad!")]
-        [Display(Name="Código de Seguridad de la Tarjeta")]    
+        [Display(Name="Código de Seguridad")]    
         public string codigo{ get; set; }
 
         [Required]
