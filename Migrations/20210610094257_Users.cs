@@ -8,6 +8,8 @@ namespace Huerto_Del_valle.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            
+
             migrationBuilder.CreateTable(
                 name: "t_pago",
                 columns: table => new
@@ -15,11 +17,12 @@ namespace Huerto_Del_valle.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     nombre = table.Column<string>(type: "text", nullable: false),
-                    apellidos = table.Column<string>(type: "text", nullable: true),
+                    apellido = table.Column<string>(type: "text", nullable: true),
                     dni = table.Column<string>(type: "text", nullable: false),
                     telefono = table.Column<string>(type: "text", nullable: false),
                     correo = table.Column<string>(type: "text", nullable: false),
-                    distrito = table.Column<string>(type: "text", nullable: false),
+                    region = table.Column<string>(type: "text", nullable: false),
+                    ciudad = table.Column<string>(type: "text", nullable: false),
                     direccion = table.Column<string>(type: "text", nullable: false),
                     referencia = table.Column<string>(type: "text", nullable: false),
                     tarjeta = table.Column<string>(type: "text", nullable: false),
@@ -32,6 +35,8 @@ namespace Huerto_Del_valle.Migrations
                     table.PrimaryKey("PK_t_pago", x => x.Id);
                 });
         }
+
+            
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {

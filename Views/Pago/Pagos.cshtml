@@ -23,7 +23,10 @@
                     @Html.DisplayNameFor(model => model.correo)
                 </th>
                 <th class="text-center">
-                    @Html.DisplayNameFor(model => model.distrito)
+                    @Html.DisplayNameFor(model => model.region)
+                </th>
+                <th class="text-center">
+                    @Html.DisplayNameFor(model => model.ciudad)
                 </th>
                 <th class="text-center">
                     @Html.DisplayNameFor(model => model.direccion)
@@ -38,7 +41,7 @@
     @foreach (var dato in Model) {
             <tr>
                 <td class="text-center">
-                    @Html.DisplayFor(modelItem => dato.nombre) @Html.DisplayFor(modelItem => dato.apellidos)
+                    @Html.DisplayFor(modelItem => dato.nombre) @Html.DisplayFor(modelItem => dato.apellido)
                 </td>
                 <td class="text-center">
                     @Html.DisplayFor(modelItem => dato.dni)
@@ -50,7 +53,10 @@
                     @Html.DisplayFor(modelItem => dato.correo)
                 </td>
                 <td class="text-center">
-                    @Html.DisplayFor(modelItem => dato.distrito)
+                    @Html.DisplayFor(modelItem => dato.region)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => dato.ciudad)
                 </td>
                 <td class="text-center">
                     @Html.DisplayFor(modelItem => dato.direccion)

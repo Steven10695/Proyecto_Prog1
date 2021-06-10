@@ -31,7 +31,7 @@ namespace Huerto_Del_valle.Controllers
         }
          [HttpPost]
           [ValidateAntiForgeryToken]
-    public IActionResult Pago([Bind("id,nombre,apellidos,dni,telefono,correo,distrito,direccion,referencia,tarjeta,vence,codigo")]Pago c)
+    public IActionResult Pago([Bind("id,nombre,apellido,dni,telefono,correo,region,ciudad,direccion,referencia,tarjeta,vence,codigo")]Pago c)
         {
             if(ModelState.IsValid){
                 _context.Add(c);

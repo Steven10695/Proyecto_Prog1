@@ -58,7 +58,11 @@ namespace Huerto_Del_valle.Migrations
                     b.Property<DateTime>("addDate")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<string>("apellidos")
+                    b.Property<string>("apellido")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ciudad")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("codigo")
@@ -73,10 +77,6 @@ namespace Huerto_Del_valle.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("distrito")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("dni")
                         .IsRequired()
                         .HasColumnType("text");
@@ -86,6 +86,10 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("referencia")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("region")
                         .IsRequired()
                         .HasColumnType("text");
 

@@ -16,8 +16,8 @@ namespace Huerto_Del_valle.Models
         [Display(Name="Nombre")]
         public string nombre{ get; set; }
 
-        [Display(Name="Apellidos")]
-        public string apellidos{ get; set; } 
+        [Display(Name="Apellido")]
+        public string apellido{ get; set; } 
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su DNI!")]
         [Display(Name="DNI")]
@@ -31,9 +31,13 @@ namespace Huerto_Del_valle.Models
         [Display(Name="Correo")]    
         public string correo{ get; set; }
 
-        [Required(ErrorMessage="¡Espacio en blanco, Ingrese su distrito!")]
-        [Display(Name="Distrito")]    
-        public string distrito{ get; set; }
+        [Required(ErrorMessage="¡Espacio en blanco, Ingrese su región!")]
+        [Display(Name="Region")]    
+        public string region{ get; set; }
+
+        [Required(ErrorMessage="¡Espacio en blanco, Ingrese su ciudad!")]
+        [Display(Name="Ciudad")]    
+        public string ciudad{ get; set; }
 
         [Required(ErrorMessage="¡Espacio en blanco, Ingrese su dirección!")]
         [Display(Name="Dirección")]    
