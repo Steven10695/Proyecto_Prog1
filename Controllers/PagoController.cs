@@ -12,14 +12,14 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Huerto_Del_valle.Controllers
 {
-    public class ConsultaController : Controller
+    public class PagoController : Controller
     {
        private readonly ILogger<ConsultaController> _logger;
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
 
 
-        public ConsultaController(ILogger<ConsultaController> logger, ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        public PagoController(ILogger<ConsultaController> logger, ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _logger = logger;
             _context=context;
