@@ -37,7 +37,7 @@ namespace Huerto_Del_valle.Controllers
                 _context.Add(c);
                 _context.SaveChanges();
                  Console.WriteLine("Pago enviado");
-                return RedirectToAction("Pago");
+                return RedirectToAction("Final");
             }
             return View(c);
         }
