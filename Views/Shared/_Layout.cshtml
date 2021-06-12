@@ -16,12 +16,12 @@
             <div class="container">
                 @if (SignInManager.IsSignedIn(User)){
                     @if(UserManager.GetUserName(User).Equals("erik_espinoza_mendoza@hotmail.com")){
-                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="IndexNC">El Huerto del Valle</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="IndexNC"><img src="https://www.elhuertodelvalle.com/wp-content/uploads/2021/05/logo-890x1024.png" alt="" style="width: 70px; height:70px ;"></a>
                     }else{
-                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">El Huerto del Valle</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="https://www.elhuertodelvalle.com/wp-content/uploads/2021/05/logo-890x1024.png" alt="" style="width: 70px; height:70px ;"></a>
                     }
                 }else{
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">El Huerto del Valle</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="https://www.elhuertodelvalle.com/wp-content/uploads/2021/05/logo-890x1024.png" alt="" style="width: 70px; height:70px ;"></a>
                     
                 }
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -50,6 +50,7 @@
         <li class="nav-item">
                              <a class="nav-link text-dark" asp-area="" asp-controller="Pago" asp-action="Pagos">Clientes</a>
                         </li>
+                      
     }else{
         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="HuertodelValle">Productos</a>
