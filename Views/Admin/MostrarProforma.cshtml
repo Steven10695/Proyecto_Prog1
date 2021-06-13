@@ -45,10 +45,36 @@
                 </td>
             </tr>
     }
+     
 
             
         </tbody>
     </table>
+
+    
+     
+      
+      @{
+         var total = 0.0;
+         var contar = 1;
+      }
+  
+         
+      @foreach (var item in Model){
+         <tr>
+            
+            @{
+               total = total + item.Precio;
+               contar++;
+            }
+         </tr>
+      }
+     
+
+     
+         <h1 class="text-center" style="margin-left: 25%;">Total:   S/ @total
+         
+      </h1>
 
     <div style="text-align: center; margin-top: 15px;">
         <a asp-controller="Pago" asp-action="Pago">
