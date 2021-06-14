@@ -1,5 +1,5 @@
 
-@using Huerto_Del_valle.Models
+@model Huerto_Del_valle.Models.Calificacion
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,24 +15,27 @@
     <p style="font-size: 20px; font-family: 'Pacifico', cursive;">Nos contactaremos pronto contigo.</p>
   </div>
   <div style="background-color: #EDA80C; width: 50%; border-radius: 20px; margin: auto;">
-    <form action="" >
+    <form action="" method="POST">
       <p style="font-size: 30px; color: white; text-align: center;">¿Te gustaría calificar nuestro servicio?</p>
         <label>¿Qué te pareció la experiencia?</label>
         <div style="display: flex;">
           <div style="margin: auto;">
             <img width="120px" src="/img/sad.png" alt="">
-            @Html.RadioButton("calificacion", "M") Mala
+            @Html.RadioButton("calificacion", "Mala") Mala
           </div>
           <div style="margin: auto;">
             <img width="120px" src="/img/serious.png" alt="">
-            @Html.RadioButton("calificacion", "R") Regular
+            @Html.RadioButton("calificacion", "Regular") Regular
           </div>
           <div style="margin: auto;">
             <img width="120px" src="/img/happy.png" alt="">
-            @Html.RadioButton("calificacion", "B") Buena
+            @Html.RadioButton("calificacion", "Buena") Buena
           </div>
         </div>
-        <button type="submit" asp-action="Calificacion" style=" padding: 10px 7px 10px 7px; color: white; background-color: #438DB1; margin: 20px; border-radius: 20px; "><b>Enviar</b></button>              
+        <div>
+          <input type="text" asp-for="pregunta" class="form-control" id=""  placeholder="y porqué?" style="border-radius:30px;" required>
+        </div>
+        <button type="submit" class="btn btn-outline-danger"  asp-action="Calificacion" style=" padding: 10px 7px 10px 7px; color: white; background-color: #438DB1; margin: 20px; border-radius: 20px; "><b>Enviar</b></button>              
     </form>
   </div>
 </section>

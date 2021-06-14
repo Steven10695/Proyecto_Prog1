@@ -12,9 +12,12 @@ namespace Huerto_Del_valle.Models
         [Column("Id")]
         public int id { get; set; }
 
-        public string calificacion{ get; set; } 
+        [Display(Name="Calificación")] 
+        public string calificacion{ get; set; }
 
-        [Required]
+        [Display(Name="Respuesta")] 
+        public string pregunta{ get; set; } 
+
         public DateTime addDate { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace Huerto_Del_valle.Controllers
                 _context.Add(c);
                 _context.SaveChanges();
                  Console.WriteLine("Pago enviado");
-                return RedirectToAction("Final");
+                return RedirectToAction("Calificacion");
             }
             return View(c);
         }
@@ -55,16 +55,62 @@ namespace Huerto_Del_valle.Controllers
             _context.SaveChanges();
             return RedirectToAction("Pagos");
         }
-        public IActionResult Final(){
+        public IActionResult Delete(int id)
+        {
+            var Calificaciones = _context.Calificacion.FirstOrDefault(p => p.id == id);
+            _context.Remove(Calificaciones);
+            _context.SaveChanges();
+            return RedirectToAction("Calificaciones");
+        }
+        public IActionResult Calificacion(){
             return View();
         }
-        
-        
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Calificacion([Bind("id,calificacion,pregunta")] Calificacion a)
+        {
+            if(ModelState.IsValid){
+                _context.Add(a);
+                _context.SaveChanges();
+                 Console.WriteLine("Calificación agregada");
+                return RedirectToAction("HuertodelValle","Admin");
+            }
+            return View(a);
+        }
+        public IActionResult Calificaciones(){
+            var Calificaciones = _context.Calificacion.ToList();
+            return View(Calificaciones);
+        } 
 
         public IActionResult Pagos()
         { 
         var pagos = _context.Pago.ToList();
             return View(pagos);
+        }
+        public IActionResult EditarCliente(int id){
+            var pago = _context.Pago.Find(id);
+            return View(pago);
+        }
+         [HttpPost]
+        public IActionResult EditarCliente(Pago p)
+        {   
+            if(ModelState.IsValid){
+                var pago = _context.Pago.Find(p.id);
+                pago.nombre= p.nombre;
+                pago.apellido=p.apellido;
+                pago.dni=p.dni;
+                pago.telefono=p.telefono;
+                pago.correo=p.correo;
+                pago.region=p.region;
+                pago.ciudad=p.ciudad;
+                pago.direccion=p.direccion;
+                pago.referencia=p.referencia;
+                _context.SaveChanges();
+                 Console.WriteLine("Cliente editado");
+                return RedirectToAction("Pagos");
+            }
+            return View(p);
         }
     }
 }

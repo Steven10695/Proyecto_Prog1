@@ -47,15 +47,15 @@ namespace Huerto_Del_valle.Models
         [Display(Name="Referencia")]    
         public string referencia{ get; set; }
 
-        [Required(ErrorMessage="¡Espacio en blanco, Ingrese el número de la tarjeta!")]
+        
         [Display(Name="Tarjeta")]    
         public string tarjeta{ get; set; }
 
-        [Required(ErrorMessage="¡Espacio en blanco, Ingrese la fecha de vencimiento!")]
+        
         [Display(Name="Fecha de vencimiento")]    
         public string vence{ get; set; }
 
-        [Required(ErrorMessage="¡Espacio en blanco, Ingrese el código de seguridad!")]
+        
         [Display(Name="Código de Seguridad")]    
         public string codigo{ get; set; }
 

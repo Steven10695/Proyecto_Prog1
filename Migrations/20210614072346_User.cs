@@ -15,13 +15,16 @@ namespace Huerto_Del_valle.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     calificacion = table.Column<string>(type: "text", nullable: true),
+                    pregunta = table.Column<string>(type: "text", nullable: true),
                     addDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_t_calificacion", x => x.Id);
                 });
+
         }
+
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

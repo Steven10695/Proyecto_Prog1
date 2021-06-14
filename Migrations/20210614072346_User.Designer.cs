@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Huerto_Del_valle.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210613095821_User")]
+    [Migration("20210614072346_User")]
     partial class User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,9 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("calificacion")
+                        .HasColumnType("text");
+
+                    b.Property<string>("pregunta")
                         .HasColumnType("text");
 
                     b.HasKey("id");
@@ -87,7 +90,6 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("codigo")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("correo")
@@ -115,7 +117,6 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("tarjeta")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("telefono")
@@ -123,7 +124,6 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("vence")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("id");

@@ -64,8 +64,25 @@
                 <td class="text-center">
                     @Html.DisplayFor(modelItem => dato.referencia)
                 </td>
+                <td>
+                    <div class="card-body" style="text-align: center;">
+                            <form action="EditarCliente">
+                                <input type="hidden" name="Id" value="@dato.id">
+                                <button class="btn btn-outline-danger">Editar</button>
+                            </form> 
+                        </div>
+                        <div class="card-body" style="text-align: center;">
+                            <form action="/Pago/Eliminar" method="POST">
+                                <input type="hidden" name="Id" value="@dato.id">
+                                <button class="btn btn-outline-danger">Eliminar</button>
+                            </form> 
+                        </div>
+                </td>
             </tr>
     }
         </tbody>
     </table>
+    <br><br>
+    <br><br>
+    <br><br>
 </div>

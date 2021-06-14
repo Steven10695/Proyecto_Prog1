@@ -33,6 +33,9 @@ namespace Huerto_Del_valle.Migrations
                     b.Property<string>("calificacion")
                         .HasColumnType("text");
 
+                    b.Property<string>("pregunta")
+                        .HasColumnType("text");
+
                     b.HasKey("id");
 
                     b.ToTable("t_calificacion");
@@ -85,7 +88,6 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("codigo")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("correo")
@@ -113,7 +115,6 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("tarjeta")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("telefono")
@@ -121,7 +122,6 @@ namespace Huerto_Del_valle.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("vence")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("id");
