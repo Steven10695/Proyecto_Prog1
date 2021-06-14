@@ -1,12 +1,15 @@
 @model IEnumerable<Huerto_Del_valle.Models.Proforma>
 
-
-
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url(../img/Carrito.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #66999;">
 <div class="container">
-    <h1>Productos Seleccionados</h1>
+    <h1 style="color: #ffff; font-size: 50px; font-family: 'Lobster', cursive; margin-top: 20px;  margin-bottom: 10px;">Tus Productos</h1>
     <table class="table">
         <thead>
-            <tr>
+            <tr style="font-size: 30px;">
                 <th class="text-center">
                     Producto
                 </th>
@@ -24,7 +27,7 @@
         </thead>
         <tbody>
     @foreach (var item in Model) {
-            <tr>
+            <tr style="font-size: 25px;">
                 <td>
                     <div class="text-center">
                         <img src="@Html.DisplayFor(modelItem => item.ProductoId.url_producto)" width="65px" height="65px" alt="">
@@ -41,7 +44,7 @@
                 </td>
                  <td class="text-center">
                     
-                    <a asp-action="EliminarProforma" asp-route-id="@item.id" style="color: #D52F0B;" >Eliminar</a>
+                    <a asp-action="EliminarProforma" asp-route-id="@item.id" style="color: #D52F0B;">Eliminar</a>
                 </td>
             </tr>
     }
@@ -72,13 +75,13 @@
      
 
      
-         <h1 class="text-center" style="margin-left: 25%;">Total:   S/ @total
+         <h1 class="text-right" style="color: #ffff; font-size: 40px; font-family: 'Lobster', cursive; margin-top: 20px;  margin-bottom: 10px;">Total:   S/ @total
          
       </h1>
 
     <div style="text-align: center; margin-top: 15px;">
         <a asp-controller="Pago" asp-action="Pago">
-        <button type="button" class="btn btn-outline-primary">Ir a comprar</button></a>
+        <button type="button" class="btn btn-outline-danger" style="font-size: 20px;">Ir a comprar</button></a>
     </div>
     <br><br>
     <br><br>
@@ -89,3 +92,4 @@
     
 
 </div>
+</body>
