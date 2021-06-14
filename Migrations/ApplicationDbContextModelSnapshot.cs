@@ -19,6 +19,25 @@ namespace Huerto_Del_valle.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+            modelBuilder.Entity("Huerto_Del_valle.Models.Calificacion", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("addDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("calificacion")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("t_calificacion");
+                });
+
             modelBuilder.Entity("Huerto_Del_valle.Models.Consulta", b =>
                 {
                     b.Property<int>("id")

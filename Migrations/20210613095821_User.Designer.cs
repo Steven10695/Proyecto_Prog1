@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Huerto_Del_valle.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210610094257_Users")]
-    partial class Users
+    [Migration("20210613095821_User")]
+    partial class User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,25 @@ namespace Huerto_Del_valle.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+            modelBuilder.Entity("Huerto_Del_valle.Models.Calificacion", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("addDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("calificacion")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("t_calificacion");
+                });
 
             modelBuilder.Entity("Huerto_Del_valle.Models.Consulta", b =>
                 {

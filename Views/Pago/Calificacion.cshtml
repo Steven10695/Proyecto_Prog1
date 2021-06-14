@@ -1,0 +1,44 @@
+
+@using Huerto_Del_valle.Models
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #fff;">
+
+<section style= "justify-content: center; width: 100%; text-align: center;">
+  <div>
+    <img width="200px" height="200px" src="/img/tick.png" alt="">
+    <h1 style="color: #EDA80C; font-size: 50px; font-family: 'Lobster', cursive; margin-top: 20px;  margin-bottom: 10px;">Su compra se realizó con éxito.</h1>
+    <p style="font-size: 20px; font-family: 'Pacifico', cursive;">Nos contactaremos pronto contigo.</p>
+  </div>
+  <div style="background-color: #EDA80C; width: 50%; border-radius: 20px; margin: auto;">
+    <form action="" >
+      <p style="font-size: 30px; color: white; text-align: center;">¿Te gustaría calificar nuestro servicio?</p>
+        <label>¿Qué te pareció la experiencia?</label>
+        <div style="display: flex;">
+          <div style="margin: auto;">
+            <img width="120px" src="/img/sad.png" alt="">
+            @Html.RadioButton("calificacion", "M") Mala
+          </div>
+          <div style="margin: auto;">
+            <img width="120px" src="/img/serious.png" alt="">
+            @Html.RadioButton("calificacion", "R") Regular
+          </div>
+          <div style="margin: auto;">
+            <img width="120px" src="/img/happy.png" alt="">
+            @Html.RadioButton("calificacion", "B") Buena
+          </div>
+        </div>
+        <button type="submit" asp-action="Calificacion" style=" padding: 10px 7px 10px 7px; color: white; background-color: #438DB1; margin: 20px; border-radius: 20px; "><b>Enviar</b></button>              
+    </form>
+  </div>
+</section>
+
+
+
+
+
+</body>

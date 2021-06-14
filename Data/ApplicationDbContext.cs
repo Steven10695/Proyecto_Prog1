@@ -15,6 +15,7 @@ namespace Huerto_Del_valle.Data
         public DbSet<Reclamo> Reclamo { get; set; }
         public DbSet<Proforma> Proforma { get; set; }
         public DbSet<Pago> Pago { get; set; }
+        public DbSet<Calificacion> Calificacion { get; set; }
      
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
